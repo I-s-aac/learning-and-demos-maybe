@@ -1,0 +1,53 @@
+.rounded-button {
+    padding: 5px 15px;
+    border-width: 1px;
+    border-radius: 20px;
+}
+
+.slightly-rounded-button {
+    padding: 1%;
+    border-width: 1px;
+    border-radius: 5px;
+}
+
+.box-with-border {
+    border-width: 1px;
+}
+
+.main-card {
+    padding: 10px;
+    width: 50%;
+    border-width: 20px;
+    border-color: black;
+    background-color: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-streak-card {
+    padding: 10px;
+    width: 25%;
+    border-width: 20px;
+    border-color: black;
+    background-color: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.group-card {
+
+}
+
+.align-right {
+
+}
+
+.align-center {
+
+}
+
+.align-left {
+
+}

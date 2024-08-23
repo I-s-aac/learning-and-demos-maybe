@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    <header>
+        <img src="menu?">
+        <img src="logo">
+        <h3>title</h3>
+
+        <img src="magnifying glass">
+        <input type="text" placeholder="Search...">
+
+        <button class="rounded-button">
+            <img src="plus sign">
+            <span>Create</span>
+        </button>
+
+        <img src="notification bell">
+        <img src="user profile">
+    </header>
+
+
+    <nav>
+        <img src="home"><a href="home">Home</a> <br>
+        <img src="calendar"><a href="calendar">Calendar</a> <br>
+        <img src="chat"><a href="chat">Chat </a><span id="notification count">11111</span> <br>
+        <img src="groups"><a href="groups">Groups</a> <br>
+        <img src="events"><a href="events">Events</a> <br>
+        <img src="nearby"><a href="nearby">Nearby</a> <br>
+        <img src="locations"><a href="locations">Locations</a> <br>
+        <img src="attendance"><a href="attendance">Attendance</a> <br> <br>
+
+        <img src="settings"><a href="settings">Settings</a>
+
+        <p id="copyright">copyright</p>
+    </nav>
+
+
+    <main>
+        <div id="search-streaks" class="main-card">
+            <h3>Search Streaks</h3>
+            <select name="sort-1" class="slightly-rounded-button">
+                <option value="most-attendance">Most Attendance</option>
+            </select>
+
+            <span>at</span>
+
+            <select name="sort-2" class="slightly-rounded-button">
+                <option value="">Select Group Event Type...</option>
+            </select>
+
+            <select name="sort-3" class="slightly-rounded-button">
+                <option value="this-year">This Year</option>
+            </select>
+
+            <span><img src="blue magnifying glass">Search</span>
+        </div>
+
+        <br>
+
+        <div id="group-attendance" class="main-card">
+            <span>group attendance | want to watch</span>
+            <span>+ Add group to watch</span>
+
+            <div class="group-card" id="group-1">
+                <span id="group-1-name">insert text via js</span>
+                <span id="group-1-progress">xx% <img src=""></span>
+                <br>
+                <img src="gold medal">
+                <span>Most attended: </span>
+                <span id="group-1-most-attended">name</span>
+                <br>
+                <img src="gold medal">
+                <span>Longest Streak: </span>
+                <span id="group-1-longest-streak">name</span>
+            </div>
+
+            <div class="group-card" id="group-2">
+                <span id="group-2-name">insert text via js</span>
+                <span id="group-2-progress">xx% <img src=""></span>
+                <br>
+                <img src="gold medal">
+                <span>Most attended: </span>
+                <span id="group-2-most-attended">name</span>
+                <br>
+                <img src="gold medal">
+                <span>Longest Streak: </span>
+                <span id="group-2-longest-streak">name</span>
+            </div>
+
+            <div class="group-card" id="group-3">
+                <span id="group-3-name">insert text via js</span>
+                <span id="group-3-progress">xx% <img src=""></span>
+                <br>
+                <img src="gold medal">
+                <span>Most attended: </span>
+                <span id="group-3-most-attended">name</span>
+                <br>
+                <img src="gold medal">
+                <span>Longest Streak: </span>
+                <span id="group-3-longest-streak">name</span>
+            </div>
+        </div>
+
+        <br>
+
+        <div id="point-rules" class="main-card">
+            <span>Your point rules</span>
+            <span>+ Add points rule</span>
+            <br>
+            <!--idk how i would do a dynamic thingy so i'll just put 2 things there-->
+            <p id="rule-1">
+                <span id="rule-1-1">for every check-in</span>
+                <span> at </span>
+                <span id="rule-1-2">all school name</span>
+                <span> events, award </span>
+                <span id="rule-1-3">x pts/pt</span>
+            </p>
+            <p id="rule-2">
+                <span id="rule-2-1">for every check-in</span>
+                <span> at </span>
+                <span id="rule-2-2">all school name</span>
+                <span> events, award </span>
+                <span id="rule-2-3">x pts/pt</span>
+            </p>
+        </div>
+
+        <br>
+
+        <div id="point-shops" class="main-card">
+            <span class="align-left">shops where points can be used</span>
+            <span class="align-right">+ add points rule</span>
+            <br>
+            <p id="point-shop-1">add text here</p>
+        </div>
+
+    </main>
+
+
+    <div id="top-streaks">
+        <h3>Top Streaks</h3>
+        <div id="top-streak-1" class="top-streak-card">
+            <p id="top-streak-1-name">name</p>
+            <img src="gold trophy" class="big-trophy">
+            <p><span id="top-streak-1-count">numx @ </span><span id=top-streak-1-school>school name</span></p>
+        </div>
+        <br>
+        <div id="top-streak-2" class="top-streak-card">
+            <p id="top-streak-2-name">name</p>
+            <img src="gold trophy" class="big-trophy">
+            <p><span id="top-streak-2-count">numx @ </span><span id=top-streak-2-school>school name</span></p>
+        </div>
+        <br>
+        <div id="top-streak-3" class="top-streak-card">
+            <p id="top-streak-3-name">name</p>
+            <img src="gold trophy" class="big-trophy">
+            <p><span id="top-streak-3-count">numx @ </span><span id=top-streak-3-school>school name</span></p>
+        </div>
+        <br>
+        <div id="top-streak-4" class="top-streak-card">
+            <p id="top-streak-4-name">name</p>
+            <img src="gold trophy" class="big-trophy">
+            <p><span id="top-streak-4-count">numx @ </span><span id=top-streak-4-school>school name</span></p>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
