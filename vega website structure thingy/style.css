@@ -1,53 +1,57 @@
-.rounded-button {
-    padding: 5px 15px;
-    border-width: 1px;
-    border-radius: 20px;
-}
-
-.slightly-rounded-button {
-    padding: 1%;
-    border-width: 1px;
-    border-radius: 5px;
-}
-
-.box-with-border {
-    border-width: 1px;
-}
-
-.main-card {
-    padding: 10px;
-    width: 50%;
-    border-width: 20px;
-    border-color: black;
-    background-color: green;
+main {
     display: flex;
-    justify-content: center;
+}
+
+.centerColumn,
+.topStreaks,
+nav,
+header,
+.topStreakCard,
+.groupCard,
+.centerCard {
+    display: flex;
+    border: 1px solid gray;
+}
+
+header {
+    justify-content: space-between;
     align-items: center;
 }
 
-.top-streak-card {
-    padding: 10px;
-    width: 25%;
-    border-width: 20px;
-    border-color: black;
-    background-color: green;
-    display: flex;
-    justify-content: center;
+nav {
+    flex-grow: 0.5;
+    flex-direction: column;
+}
+
+.centerColumn {
+    flex-grow: 2;
+    flex-direction: column;
     align-items: center;
 }
 
-.group-card {
+.topStreaks {
+    flex-grow: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.topStreaks img {
+    max-width: 50%;
 
 }
 
-.align-right {
+.topStreakCard {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.groupCard {
 
 }
 
-.align-center {
-
-}
-
-.align-left {
+.centerCard {
 
 }
