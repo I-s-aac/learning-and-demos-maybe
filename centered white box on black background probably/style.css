@@ -1,0 +1,24 @@
+.floatingBox {
+    padding: 5%;
+    background-color: white;
+    border-radius: 50000px;
+}
+
+.modal, .modalPositioning {
+    width: 100vw;
+    height: 100vh;
+    margin: 0px;
+    padding: 0px;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: none;
+    position: fixed;
+}
+
+.modal {
+    background-image: linear-gradient(white, black);
+    opacity: 0.7;
+}
