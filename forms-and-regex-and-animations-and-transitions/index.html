@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .centerBox {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        #tiger, #dog, #cat {
+            width: 15vw;
+        }
+
+        @keyframes tiger {
+            50% { translate: 0px 100px; }
+            100% { translate: 0px 0px; }
+        }
+
+        @keyframes cat {
+            50% { translate: 75vw 75vh; }
+            100% { translate: 0px 0px;}
+        }
+
+        
+        #tiger {
+            animation: tiger 0.3s infinite;
+        }
+
+        /*#cat {
+            animation: cat 1s infinite;
+        }*/
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+            width: 25%;
+            height: 25%;
+            padding: 10px;
+        }
+
+        body {
+            background-image: url(jungle.jpg);
+        }
+
+        /*
+        @keyframes rotate0To90 {
+            from { rotate: 0deg; }
+            to { rotate: 90deg; }
+        }
+        @keyframes rotate90To284 {
+            to { rotate: 360deg; }
+        }
+
+        form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        input {
+            animation: rotate90To284 1s infinite;
+        }
+
+        body {
+            display: flex;
+        }
+
+        h1 {
+
+            transition: rotate 0.5s ease-in-out;
+            rotate: 0deg;
+        }
+        h1:hover {
+            transition: rotate 0.5s ease-in-out;
+            rotate: 360deg;
+        }
+
+        @keyframes bounce {
+
+        }
+
+        .ball {
+            width: 50px;
+            height: 50px;
+            border-radius: 1000px;
+            background-color: red;
+        }
+            */
+    </style>
+    <img src="tiger.png" id="tiger">
+    <img src="cat.png" id="cat">
+    <img src="dog.png" id="dog">
+
+
+    <div class="centerBox">
+        <form>
+            <label for="1">put a number</label>
+            <input type="number" name="1" required>
+
+            <label for="2">put an email</label>
+            <input type="email" name="2" required>
+
+            <label for="3">check this box</label>
+            <input type="checkbox" name="3" required>
+
+            <label for="4">pick something along the range</label>
+            <input type="range" name="4" required>
+
+            <input type="submit">
+        </form>
+    </div>
+
+
+
+    <!--
+    <form>
+        <label id="c" for="expression">aaaaa</label>
+        <input type="text" id="e" pattern="[a-z]+[A-Z]+3" required>
+
+        <input id="b" type="submit">
+    </form>
+
+    <div>
+        <h1>text</h1>
+    </div>
+
+
+    <div class="ball" id="ball1"></div>
+    <div class="ball" id="ball2"></div>
+    <div class="ball" id="ball3"></div>
+    <div class="ball" id="ball4"></div>
+-->
+
+    <script>
+
+        const dog = document.getElementById("dog");
+        const cat = document.getElementById("cat");
+
+        let rotation = 0;
+        let xv = (Math.random() - 0.5) * 15;
+        let yv = (Math.random() - 0.5) * 15;
+        let x = 0;
+        let y = 0;
+
+        var catX = 0;
+        var catY = 0;
+
+
+        var keysDown = {
+            "w": false,
+            "a": false,
+            "s": false,
+            "d": false
+        }
+
+        setInterval(() => {
+            
+            rotation += 5;
+            x += xv;
+            y += yv;
+            let rect = dog.getBoundingClientRect();
+            dog.style.translate = x + "px " + y + "px";
+            dog.style.rotate = rotation + "deg";
+            if (rotation > 360) { rotation = 0; }
+
+            if (rect.left < 0) { xv = Math.abs(xv) }
+            if (rect.right > document.documentElement.clientWidth) { xv = -Math.abs(xv) }
+            if (rect.top < 0) { yv = Math.abs(yv); }
+            if (rect.bottom > document.documentElement.clientHeight) { yv = -Math.abs(yv) }
+
+        }, 10);
+
+
+        window.addEventListener("keydown", (event) => {
+            keysDown[event.key] = true;
+        })
+
+        window.addEventListener("keyup", (event) => {
+            keysDown[event.key] = false;
+        })
+
+        setInterval(() => {
+            let speed = 10;
+            if (keysDown["w"]) {
+                catY -= speed;
+            }
+            if (keysDown.a) {
+                catX -= speed;
+            }
+            if (keysDown.s) {
+                catY += speed;
+            }
+            if (keysDown.d) {
+                catX += speed;
+            }
+
+            cat.style.translate = catX + "px " + catY + "px";
+        }, 10);
+        
+
+        // just having some fun
+        /*
+        let elementsToRotate = [
+            document.getElementById("b"),
+            document.getElementById("c"),
+            document.getElementById("e"),
+        ]
+        let num = 0;
+        let aaaaa = setInterval(() => {
+            for (let i = 0; i < elementsToRotate.length; i++) {
+                
+                elementsToRotate[i].style.color = "rgb(" + Math.random() * 255 + ", " + Math.random() * 255 + ", " + Math.random() * 255 + ")";
+                elementsToRotate[i].style.backgroundColor = "rgb(" + Math.random() * 255 + ", " + Math.random() * 255 + ", " + Math.random() * 255 + ")";
+            }
+
+        }, 10);
+        clearInterval(aaaaa);
+        */
+        /*
+        let ball1 = document.getElementById("ball1");
+        let ball2 = document.getElementById("ball2");
+        let ball3 = document.getElementById("ball3");
+        let ball4 = document.getElementById("ball4");
+        let xv1 = Math.random();
+        let yv1 = Math.random();
+        let xv2 = Math.random();
+        let yv2 = Math.random();
+        let xv3 = Math.random();
+        let yv3 = Math.random();
+        let xv4 = Math.random();
+        let yv4 = Math.random();
+        let x = 0;
+        let y = 0;
+
+        setInterval(() => {
+            ball1.style.translate = x + "px " + y + "px";
+            ball1.style.translate = x + "px " + y + "px";
+            ball1.style.translate = x + "px " + y + "px";
+            ball1.style.translate = x + "px " + y + "px";
+            y += yv;
+            x += xv;
+            let rect = ball.getBoundingClientRect()
+            if (rect.bottom > document.documentElement.clientHeight) {
+                yv = -5
+            }
+            if (rect.top <= 0) {
+                yv = 5;
+            }
+            if (rect.left <= 0) {
+                xv = 5;
+            }
+            if (rect.right >= document.documentElement.clientWidth) {
+                xv = -5;
+            }
+        }, 10);
+        */
+    </script>
+
+</body>
+
+</html>
