@@ -25,23 +25,25 @@
             height: 100vh;
         }
 
-        #tiger, #dog, #cat {
+        #tiger {
             width: 15vw;
         }
-
+        
+        #dog, #cat {
+            width: 5vw;
+        }
         @keyframes tiger {
-            50% { translate: 0px 100px; }
+            50% { translate: 0px -100px; }
             100% { translate: 0px 0px; }
         }
 
-        @keyframes cat {
-            50% { translate: 75vw 75vh; }
-            100% { translate: 0px 0px;}
-        }
 
         
         #tiger {
             animation: tiger 0.3s infinite;
+            position: fixed;
+            left: 0px;
+            bottom: 0px;
         }
 
         /*#cat {
@@ -109,8 +111,8 @@
         }
             */
     </style>
-    <img src="tiger.png" id="tiger">
     <img src="cat.png" id="cat">
+    <img src="tiger.png" id="tiger">
     <img src="dog.png" id="dog">
 
 
@@ -201,9 +203,15 @@
             keysDown[event.key] = false;
         })
 
+        window.addEventListener("mousemove", (event) => {
+            let jitter = 25;
+            catY = event.pageY + (Math.random() - 0.5) * jitter;
+            catX = event.pageX + (Math.random() - 0.5) * jitter;
+        })
+
         setInterval(() => {
             let speed = 10;
-            if (keysDown["w"]) {
+            if (keysDown.w) {
                 catY -= speed;
             }
             if (keysDown.a) {
