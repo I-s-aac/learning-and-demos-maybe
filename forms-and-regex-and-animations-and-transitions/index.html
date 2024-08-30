@@ -21,7 +21,7 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            width: 100vw;
+            width: 99vw;
             height: 100vh;
         }
 
@@ -128,7 +128,11 @@
             <input type="checkbox" name="3" required>
 
             <label for="4">pick something along the range</label>
+            <div style="display: flex">
+            <span>agree </span>
             <input type="range" name="4" required>
+            <span> disagree</span>
+        </div>
 
             <input type="submit">
         </form>
@@ -161,8 +165,8 @@
         const cat = document.getElementById("cat");
 
         let rotation = 0;
-        let xv = (Math.random() - 0.5) * 15;
-        let yv = (Math.random() - 0.5) * 15;
+        var xv = (Math.random() - 0.5) * 15;
+        var yv = (Math.random() - 0.5) * 15;
         let x = 0;
         let y = 0;
 
@@ -179,18 +183,47 @@
 
         setInterval(() => {
             
-            rotation += 5;
+            if (xv > 0) { rotation += 5; } else { rotation -= 5;}
             x += xv;
             y += yv;
             let rect = dog.getBoundingClientRect();
-            dog.style.translate = x + "px " + y + "px";
-            dog.style.rotate = rotation + "deg";
+            let catRect = cat.getBoundingClientRect();
+            
             if (rotation > 360) { rotation = 0; }
+            if (rotation < 0) { rotation = 360; }
 
             if (rect.left < 0) { xv = Math.abs(xv) }
-            if (rect.right > document.documentElement.clientWidth) { xv = -Math.abs(xv) }
+            if (rect.right + xv > document.documentElement.clientWidth) { xv = -Math.abs(xv) }
             if (rect.top < 0) { yv = Math.abs(yv); }
             if (rect.bottom > document.documentElement.clientHeight) { yv = -Math.abs(yv) }
+
+
+           let maybeTop = rect.top < catRect.bottom && rect.top > catRect.top;
+           let maybeBottom = rect.bottom > catRect.top && rect.bottom < catRect.bottom
+           let maybeLeft = rect.left < catRect.right && rect.left > catRect.left;
+           let maybeRight = rect.right > catRect.left && rect.right < catRect.right
+
+            if (maybeTop || maybeBottom) {
+                if (maybeLeft) {
+                    xv = Math.abs(xv) + 0.1;
+                }
+                if (maybeRight) {
+                    xv = -Math.abs(xv) - 0.1;
+                }
+            }
+
+            if (maybeRight || maybeLeft) {
+                if (maybeTop) {
+                    yv = Math.abs(yv) + 0.1;
+                }
+                if (maybeBottom) {
+                    yv = -Math.abs(yv) - 0.1;
+                }
+            }
+
+            dog.style.translate = x + "px " + y + "px";
+            dog.style.rotate = rotation + "deg";
+
 
         }, 10);
 
