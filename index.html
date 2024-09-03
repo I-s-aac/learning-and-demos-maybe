@@ -9,315 +9,155 @@
 </head>
 
 <body>
+    <div class="content">
+        <header>
+            <div class="logo">
+                <img src="menu?">
+                <img src="logo">
+                <h3>Logo</h3>
+            </div>
 
-    <style>
-        * {
-            padding: 0px;
-            margin: 0px;
-        }
+            <div class="searchBar">
+                <img src="magnifying glass">
+                <input type="text" placeholder="Search...">
+            </div>
 
-        .centerBox {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            width: 99vw;
-            height: 100vh;
-        }
+            <div class="userStuff">
+                <button class="rounded-button">
+                    <img src="plus sign">
+                    <span>Create</span>
+                </button>
 
-        #tiger {
-            width: 15vw;
-        }
-        
-        #dog, #cat {
-            width: 5vw;
-        }
-        @keyframes tiger {
-            50% { translate: 0px -100px; }
-            100% { translate: 0px 0px; }
-        }
+                <img src="notification bell">
+                <img src="user profile">
+            </div>
+        </header>
 
+        <main>
+            <nav>
+                <div><img src="home"><a href="home">Home</a></div>
+                <div><img src="calendar"><a href="calendar">Calendar</a></div>
+                <div><img src="chat"><a href="chat">Chat </a><span id="notification count">11111</span></div>
+                <div><img src="groups"><a href="groups">Groups</a></div>
+                <div><img src="events"><a href="events">Events</a></div>
+                <div><img src="nearby"><a href="nearby">Nearby</a></div>
+                <div><img src="locations"><a href="locations">Locations</a></div>
+                <div><img src="attendance"><a href="attendance">Attendance</a></div>
 
-        
-        #tiger {
-            animation: tiger 0.3s infinite;
-            position: fixed;
-            left: 0px;
-            bottom: 0px;
-        }
+                <div><img src="settings"><a href="settings">Settings</a></div>
 
-        /*#cat {
-            animation: cat 1s infinite;
-        }*/
-
-        form {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            background-color: white;
-            width: 25%;
-            height: 25%;
-            padding: 10px;
-        }
-
-        body {
-            background-image: url(rick-roll.gif);
-        }
-
-        /*
-        @keyframes rotate0To90 {
-            from { rotate: 0deg; }
-            to { rotate: 90deg; }
-        }
-        @keyframes rotate90To284 {
-            to { rotate: 360deg; }
-        }
-
-        form {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-
-        input {
-            animation: rotate90To284 1s infinite;
-        }
-
-        body {
-            display: flex;
-        }
-
-        h1 {
-
-            transition: rotate 0.5s ease-in-out;
-            rotate: 0deg;
-        }
-        h1:hover {
-            transition: rotate 0.5s ease-in-out;
-            rotate: 360deg;
-        }
-
-        @keyframes bounce {
-
-        }
-
-        .ball {
-            width: 50px;
-            height: 50px;
-            border-radius: 1000px;
-            background-color: red;
-        }
-            */
-    </style>
-    <img src="cat.png" id="cat">
-    <img src="tiger.png" id="tiger">
-    <img src="dog.png" id="dog">
+                <p id="copyright">copyright</p>
+            </nav>
 
 
-    <div class="centerBox">
-        <form>
-            <label for="1">put a number</label>
-            <input type="number" name="1" required>
+            <div class="centerColumn">
+                <div id="search-streaks" class="centerCard">
+                    <h3>Search Streaks</h3>
+                    <select name="sort-1" class="slightly-rounded-button">
+                        <option value="most-attendance">Most Attendance</option>
+                    </select>
 
-            <label for="2">put an email</label>
-            <input type="email" name="2" required>
+                    <span>at</span>
 
-            <label for="3">check this box</label>
-            <input type="checkbox" name="3" required>
+                    <select name="sort-2" class="slightly-rounded-button">
+                        <option value="">Select Group Event Type...</option>
+                    </select>
 
-            <label for="4">pick something along the range</label>
-            <div style="display: flex">
-            <span>agree </span>
-            <input type="range" name="4" required>
-            <span> disagree</span>
-        </div>
+                    <select name="sort-3" class="slightly-rounded-button">
+                        <option value="this-year">This Year</option>
+                    </select>
 
-            <input type="submit">
-        </form>
+                    <span><img src="blue magnifying glass">Search</span>
+                </div>
+
+                <br>
+
+                <div class="twoToneCenterCard groupAttendance">
+
+                    <div class="centerCardTitle">
+                        <p>group attendance | want to watch</p>
+                        <p>+ Add group to watch</p>
+                    </div>
+
+                    <div class="centerCardContent">
+                        <div class="groupCard">
+                            <div class="alignTopRow">
+                                <h1>Group Name</h1>
+                                <p>magic! %of completion!</p>
+                            </div>
+                            <div class="topGroupName">
+                                this is kinda annoying to do
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <br>
+
+                <div id="point-rules" class="centerCard">
+                    <span>Your point rules</span>
+                    <span>+ Add points rule</span>
+                    <br>
+                    <!--idk how i would do a dynamic thingy so i'll just put 2 things there-->
+                    <p id="rule-1">
+                        <span id="rule-1-1">for every check-in</span>
+                        <span> at </span>
+                        <span id="rule-1-2">all school name</span>
+                        <span> events, award </span>
+                        <span id="rule-1-3">x pts/pt</span>
+                    </p>
+                    <p id="rule-2">
+                        <span id="rule-2-1">for every check-in</span>
+                        <span> at </span>
+                        <span id="rule-2-2">all school name</span>
+                        <span> events, award </span>
+                        <span id="rule-2-3">x pts/pt</span>
+                    </p>
+                </div>
+
+                <br>
+
+                <div id="point-shops" class="centerCard">
+                    <span class="align-left">shops where points can be used</span>
+                    <span class="align-right">+ add points rule</span>
+                    <br>
+                    <p id="point-shop-1">add text here</p>
+                </div>
+            </div>
+
+
+
+            <div class="topStreaks">
+                <h3>Top Streaks</h3>
+                <div id="top-streak-1" class="topStreakCard">
+                    <p id="top-streak-1-name">name</p>
+                    <img src="trophy.png" class="big-trophy">
+                    <p><span id="top-streak-1-count">numx @ </span><span id=top-streak-1-school>school name</span></p>
+                </div>
+                <br>
+                <div id="top-streak-2" class="topStreakCard">
+                    <p id="top-streak-2-name">name</p>
+                    <img src="trophy.png" class="big-trophy">
+                    <p><span id="top-streak-2-count">numx @ </span><span id=top-streak-2-school>school name</span></p>
+                </div>
+                <br>
+                <div id="top-streak-3" class="topStreakCard">
+                    <p id="top-streak-3-name">name</p>
+                    <img src="trophy.png" class="big-trophy">
+                    <p><span id="top-streak-3-count">numx @ </span><span id=top-streak-3-school>school name</span></p>
+                </div>
+                <br>
+                <div id="top-streak-4" class="topStreakCard">
+                    <p id="top-streak-4-name">name</p>
+                    <img src="trophy.png" class="big-trophy">
+                    <p><span id="top-streak-4-count">numx @ </span><span id=top-streak-4-school>school name</span></p>
+                </div>
+            </div>
+        </main>
+
+
     </div>
-
-
-
-    <!--
-    <form>
-        <label id="c" for="expression">aaaaa</label>
-        <input type="text" id="e" pattern="[a-z]+[A-Z]+3" required>
-
-        <input id="b" type="submit">
-    </form>
-
-    <div>
-        <h1>text</h1>
-    </div>
-
-
-    <div class="ball" id="ball1"></div>
-    <div class="ball" id="ball2"></div>
-    <div class="ball" id="ball3"></div>
-    <div class="ball" id="ball4"></div>
--->
-
-    <script>
-
-        const dog = document.getElementById("dog");
-        const cat = document.getElementById("cat");
-
-        let rotation = 0;
-        var xv = (Math.random() - 0.5) * 15;
-        var yv = (Math.random() - 0.5) * 15;
-        let x = 0;
-        let y = 0;
-
-        var catX = 0;
-        var catY = 0;
-
-
-        var keysDown = {
-            "w": false,
-            "a": false,
-            "s": false,
-            "d": false
-        }
-
-        setInterval(() => {
-            
-            if (xv > 0) { rotation += 5; } else { rotation -= 5;}
-            x += xv;
-            y += yv;
-            let rect = dog.getBoundingClientRect();
-            let catRect = cat.getBoundingClientRect();
-            
-            if (rotation > 360) { rotation = 0; }
-            if (rotation < 0) { rotation = 360; }
-
-            if (rect.left < 0) { xv = Math.abs(xv) }
-            if (rect.right + xv > document.documentElement.clientWidth) { xv = -Math.abs(xv) }
-            if (rect.top < 0) { yv = Math.abs(yv); }
-            if (rect.bottom > document.documentElement.clientHeight) { yv = -Math.abs(yv) }
-
-
-           let maybeTop = rect.top < catRect.bottom && rect.top > catRect.top;
-           let maybeBottom = rect.bottom > catRect.top && rect.bottom < catRect.bottom
-           let maybeLeft = rect.left < catRect.right && rect.left > catRect.left;
-           let maybeRight = rect.right > catRect.left && rect.right < catRect.right
-
-            if (maybeTop || maybeBottom) {
-                if (maybeLeft) {
-                    xv = Math.abs(xv) + 0.1;
-                }
-                if (maybeRight) {
-                    xv = -Math.abs(xv) - 0.1;
-                }
-            }
-
-            if (maybeRight || maybeLeft) {
-                if (maybeTop) {
-                    yv = Math.abs(yv) + 0.1;
-                }
-                if (maybeBottom) {
-                    yv = -Math.abs(yv) - 0.1;
-                }
-            }
-
-            dog.style.translate = x + "px " + y + "px";
-            dog.style.rotate = rotation + "deg";
-
-
-        }, 10);
-
-
-        window.addEventListener("keydown", (event) => {
-            keysDown[event.key] = true;
-        })
-
-        window.addEventListener("keyup", (event) => {
-            keysDown[event.key] = false;
-        })
-
-        window.addEventListener("mousemove", (event) => {
-            let jitter = 25;
-            catY = event.pageY + (Math.random() - 0.5) * jitter;
-            catX = event.pageX + (Math.random() - 0.5) * jitter;
-        })
-
-        setInterval(() => {
-            let speed = 10;
-            if (keysDown.w) {
-                catY -= speed;
-            }
-            if (keysDown.a) {
-                catX -= speed;
-            }
-            if (keysDown.s) {
-                catY += speed;
-            }
-            if (keysDown.d) {
-                catX += speed;
-            }
-
-            cat.style.translate = catX + "px " + catY + "px";
-        }, 10);
-        
-
-        // just having some fun
-        /*
-        let elementsToRotate = [
-            document.getElementById("b"),
-            document.getElementById("c"),
-            document.getElementById("e"),
-        ]
-        let num = 0;
-        let aaaaa = setInterval(() => {
-            for (let i = 0; i < elementsToRotate.length; i++) {
-                
-                elementsToRotate[i].style.color = "rgb(" + Math.random() * 255 + ", " + Math.random() * 255 + ", " + Math.random() * 255 + ")";
-                elementsToRotate[i].style.backgroundColor = "rgb(" + Math.random() * 255 + ", " + Math.random() * 255 + ", " + Math.random() * 255 + ")";
-            }
-
-        }, 10);
-        clearInterval(aaaaa);
-        */
-        /*
-        let ball1 = document.getElementById("ball1");
-        let ball2 = document.getElementById("ball2");
-        let ball3 = document.getElementById("ball3");
-        let ball4 = document.getElementById("ball4");
-        let xv1 = Math.random();
-        let yv1 = Math.random();
-        let xv2 = Math.random();
-        let yv2 = Math.random();
-        let xv3 = Math.random();
-        let yv3 = Math.random();
-        let xv4 = Math.random();
-        let yv4 = Math.random();
-        let x = 0;
-        let y = 0;
-
-        setInterval(() => {
-            ball1.style.translate = x + "px " + y + "px";
-            ball1.style.translate = x + "px " + y + "px";
-            ball1.style.translate = x + "px " + y + "px";
-            ball1.style.translate = x + "px " + y + "px";
-            y += yv;
-            x += xv;
-            let rect = ball.getBoundingClientRect()
-            if (rect.bottom > document.documentElement.clientHeight) {
-                yv = -5
-            }
-            if (rect.top <= 0) {
-                yv = 5;
-            }
-            if (rect.left <= 0) {
-                xv = 5;
-            }
-            if (rect.right >= document.documentElement.clientWidth) {
-                xv = -5;
-            }
-        }, 10);
-        */
-    </script>
 
 </body>
 
