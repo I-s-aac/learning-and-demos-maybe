@@ -1,8 +1,41 @@
-.flexbox {
+
+nav {
     display: flex;
     background-color: gray;
-    /*justify content aligns across the main axis, not horizontally, which is why flex-direction column aligns vertically instead*/
-    /*differences between space between and around, and evenly
+    align-items: center;
+    border-radius: 30px;
+    padding: 10px;
+    height: 150px;
+}
+
+nav a {
+    margin: 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    max-height: fit-content;
+    flex-grow: 1;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    color: rgb(180, 180, 180);
+}
+
+
+
+
+/*
+    justify content aligns across the main axis, not horizontally, which is why flex-direction column aligns vertically instead
+    
+    differences between space between and around, and evenly
     between: only changes spacing between the items, not around the edges of them
     around: modifies spacing around the items including start and stuff
     evenly: even space around all the things
@@ -64,12 +97,3 @@
     aligns a specific item somewhere else along the cross axis compared to other items
     same syntax as align-items
     */
-
-    
-}
-
-.flexItem {
-    background-color: lightgray;
-    padding: 50px;
-    margin: 50px;
-}
