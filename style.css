@@ -1,0 +1,10 @@
+.flexbox {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: gray;
+
+}
+
+.flexItem {
+    background-color: lightgray;
+}
