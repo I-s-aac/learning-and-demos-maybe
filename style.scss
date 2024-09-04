@@ -1,3 +1,5 @@
+/*
+
 @use 'base';
 // using base is basically just importing global variables
 %card {
@@ -29,4 +31,29 @@
 .box {
     // still similar to my game with modifying classes
     @include theme($defaultbg: purple);
+}
+    */
+
+/*
+make ur filenames, etc make sense
+separate stuff into different files or partials or whatever
+@use 'base'; _base.scss is a partial
+base.$variableName
+@mixin name ($parameter) { property: $parameter; }
+.class { @include name ($parameter: argument) };
+%extensionName { css }
+.class { @extend %extensionName; css }
+.nesting {
+    css
+    .nesting2 {
+        css
+    }
+}
+*/
+
+@use 'variables';
+@use 'components/button';
+
+body {
+    background-color: variables.$fontColor;
 }
