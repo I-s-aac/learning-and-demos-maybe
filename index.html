@@ -1,12 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        th,
+        tr,
+        thead,
+        tbody,
+        caption,
+        td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        
+        td:nth-of-type(3),
+        th:nth-of-type(1) {
+            background-color: orange;
+        }
+
+        tr:nth-of-type(odd) {
+            background-color: blue;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        .orangeBackground {
+            background-color: orange;
+        }
+
+        .greenBackground {
+            background-color: green;
+        }
+
+        iframe {
+            width: 50vw;
+            height: 50vh;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <ul>
+        <!--incorrect syntax-->
+        <li>thing</li>
+        <ul>
+            <li>sub list</li>
+        </ul>
+
+        <!--correnct syntax-->
+        <li>
+            list
+            <ul>
+                <li>
+                    sub list
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <iframe src="index.html" title="inception?"></iframe>
+
+
+    <table>
+        <caption>
+            caption
+        </caption>
+
+        <colgroup>
+            <col>
+            <col>
+            <col class="orangeBackground">
+        </colgroup>
+
+        <thead>
+            <tr>
+                <th>header column 1</th>
+                <th>header column 2</th>
+                <th>header column 3</th>
+            </tr>
+            <tr>
+                <td>data 1</td>
+                <td>data 2</td>
+                <td rowspan="2">data 3</td>
+            </tr>
+            <tr>
+                <td>data 1</td>
+                <td>data 2</td>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <th colspan="3">header (tbody)</th>
+            </tr>
+            <tr>
+                <td colspan="2">data 1</td>
+                <td>data 2</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <th colspan="3">header (tfoot)</th>
+            </tr>
+            <tr>
+                <td>data 1</td>
+            </tr>
+        </tfoot>
+
+    </table>
+
 </body>
+
 </html>
