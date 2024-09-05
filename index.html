@@ -17,7 +17,10 @@
             text-align: center;
         }
 
-        
+        form {
+            background-color: rgb(205, 205, 205);
+        }
+
         td:nth-of-type(3),
         th:nth-of-type(1) {
             background-color: orange;
@@ -65,7 +68,7 @@
         </li>
     </ul>
 
-    <iframe src="index.html" title="inception?"></iframe>
+    <!-- <iframe src="index.html" title="inception?"></iframe> -->
 
 
     <table>
@@ -116,6 +119,119 @@
         </tfoot>
 
     </table>
+
+
+<!--
+    method: how to send stuff (get or post)
+    get:
+    gets info from servers and stuff and doesn't save usually
+    example
+    going to a webpage
+    it gets the info so that you can display the webpage
+    post:
+    send info to a place for processing
+    action: where to send stuff
+-->
+    <form method="GET" action="">
+        <label for="name" id="name">name</label>
+        <input type="text" id="name"><br>
+        <label for="email" id="email">email</label>
+        <input type="email" id="email"><br>
+    
+        <input type="submit">
+    </form>
+
+    <br><br><br><br>
+
+
+
+    <form name="" method="get" action="">
+        <label for="a">text</label>
+        <input type="text" name="a">
+        <br>
+        <label for="b">search</label>
+        <input type="search" name="b">
+        <br>
+        <label for="c">tel</label>
+        <input type="tel" name="c">
+        <br>
+
+        <label for="d">url</label>
+        <input type="url" name="d">
+        <br>
+
+        <label for="e">email</label>
+        <input type="email" name="e">
+        <br>
+
+        <label for="f">password</label>
+        <input type="password" name="f">
+        <br>
+
+        <label for="g">textarea</label>
+        <textarea name="g"></textarea>
+        <br>
+
+        <input type="submit">
+    </form>
+
+    <br>
+    <br>
+    <br>
+
+    <form name="" method="get" action="">
+
+        <label for="a"><input type="radio" name="a" id="a" value="a2">a</label><br>
+        <label for="a"><input type="radio" name="a" id="b" value="a2">b</label><br>
+        <label for="a"><input type="radio" name="a" id="c" value="a2">c</label><br>
+        <label for="a"><input type="radio" name="a" id="d" value="a2">d</label><br>
+        <br>
+
+        <input type="checkbox" name="blue" id="a2">
+        <label for="a2">a</label>
+        <br>
+        <input type="checkbox" name="blue" id="b2">
+        <label for="b2">b</label>
+        <br><br>
+        options
+        <select name="options">
+            <option label="a1" value="1"></option>
+            <option label="a2" value="2"></option>
+            <option label="a3" value="3"></option>
+            <option label="a4" value="4"></option>
+        </select>
+        <br>
+        <input type="submit">
+    </form>
+
+    <br><br><br>
+
+    <form name="" method="get" action="">
+
+        date: <input type="date"><br>
+        time: <input type="time"><br>
+        date/time (local): <input type="datetime-local"><br>
+        week: <input type="week"><br>
+        month: <input type="month"><br>
+
+        <input type="submit">
+
+    </form>
+<br><br><br>
+
+<form>
+
+    you can only put numbers here: <input type="number"><br>
+    range: <input name="range" id="range" type="range" max="100" min="0"><label for="range">a</label><br>
+    color picker: <input type="color"><br><br>
+
+
+
+</form>
+
+<br><br><br>
+
+
 
 </body>
 
