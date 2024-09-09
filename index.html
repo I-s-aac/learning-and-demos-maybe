@@ -10,11 +10,21 @@
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+
+        <style>
+            div {
+                background-color: gray;
+                border: 1px solid black;
+            }
+        </style>
 </head>
 
 <body>
+    <!-- 
+     specifying the columns to take up the full width of the row on a sm screen isn't needed
+     because it already does the by default -->
     <div class="row" id="sports">
-        <div class="col-sm-12 col-md-6 col-lg">
+        <div class="col-md-6 col-lg">
             <h2>Soccer</h2>
             <p>
                 Association football, more commonly known as football or soccer, is a
@@ -25,7 +35,7 @@
                 the game is to score by getting the ball into the opposing goal.
             </p>
         </div>
-        <div class="col-sm-12 col-md-6 col-lg">
+        <div class="col-md-6 col-lg">
             <h2>Baseball</h2>
             <p>
                 Baseball is a bat-and-ball game played between two teams of nine
@@ -37,7 +47,7 @@
                 around the bases and returns to home plate.
             </p>
         </div>
-        <div class="col-sm-12 col-lg">
+        <div class="col-lg">
             <h2>Basketball</h2>
             <p>
                 Basketball is a limited contact sport played on a rectangular court.
